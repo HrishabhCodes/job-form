@@ -12,30 +12,69 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  background-color: #95a5a6;
 }
 
 h1 {
-  color: rgb(81, 81, 81);
+  color: rgb(238, 255, 218);
+  font-weight: 900;
 }
 
 .app {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 2rem;
 }
 
 .form {
+  background-color: rgb(255, 255, 255);
   width: 60%;
   border: 1px solid rgba(128, 128, 128, 0.571);
   padding: 2rem;
   border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.asterisk {
+  color: red;
 }
 
 .error {
-  color: red;
+  color: rgb(255, 18, 18);
   margin: 0 0 1rem 0;
-  font-size: 12px;
+  font-size: 14px;
+}
+
+
+.locations-list, .skills-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.add-icon:hover {
+  cursor: pointer;
+}
+
+.cross {
+  color: white;
+  margin-right: 10px;
+}
+
+.cross:hover {
+  cursor: pointer;
+}
+
+.place-cont, .skill-container {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #808e8f;
+  margin: 1rem;
 }
 
 #experience {
@@ -81,8 +120,8 @@ hr {
   border: 1px solid rgba(128, 128, 128, 0.55);
 }
 
-textarea {
-  height: 100px;
+.desc {
+  font-size: 12px;
 }
 
 .location-cont, .skill-cont, .salary-input {
@@ -91,12 +130,17 @@ textarea {
   border-radius: 5px;
 }
 
+.locations-list {
+  margin-bottom: 1rem;
+  
+}
+
 .time-period input {
   margin: 1rem 0.5rem 1rem 2rem;
 }
 
 .add-icon, .currency-icon {
-  border-radius: 5px 0 0 5px;
+  border-radius: 0 5px 5px 0;
   width: 5%;
   display: flex;
   justify-content: center;
@@ -123,6 +167,7 @@ textarea {
   bottom: -2.75rem;
   width: 5%;
   height: 90px;
+  z-index: 1;
 }
 
 .inr, .eur, .usd {
@@ -147,9 +192,9 @@ textarea {
 
 .post-btn {
   font-weight: 400;
-  color: white;
-  background-color: rgb(35, 145, 93);
-  width: 20%;
+  color: white !important;
+  background-color: rgb(35, 145, 93) !important;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,22 +202,7 @@ textarea {
   border-radius: 5px;
   font-size: 13px;
   padding: 5px;
-  margin-right: 1rem;
-}
-
-.reset-btn {
-  font-weight: 400;
-  color: white;
-  border: 1px solid rgb(35, 145, 93);
-  color: rgb(35, 145, 93);
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2rem;
-  border-radius: 5px;
-  font-size: 13px;
-  padding: 5px;
+  margin-right: 3rem;
 }
 
 .btn-cont {
@@ -182,10 +212,25 @@ textarea {
   margin-top: 1.5rem;
 }
 
-.post-btn:hover, .reset-btn:hover {
-  cursor: pointer;
-}
-
 .skill-label {
   margin-top: 0rem;
+}
+
+.antd-item {
+  margin-bottom: 1rem;
+}
+
+.info-cont {
+  padding: 2rem;
+  font-size: 17px;
+  overflow: scroll;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 400px;
+  background-color: aliceblue;
+  border: 2px solid rgb(95, 95, 95);
 }
